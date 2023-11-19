@@ -2,6 +2,7 @@
 Microservice for CS 365.  
 
 Receives http POST requests containing json payloads formatted `{"length": value}`, where `value` can be converted to an integer.  
+
 Responds with json payloads formatted `{"string": randString}`, where `randString` is a string of `value` random characters.
 
 - [Directions](#to-use)  
