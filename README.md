@@ -1,5 +1,8 @@
 # rand-string microservice
-Microservice for CS 365 that receives a length and returns a string of random characters equal to that length.
+Microservice for CS 365.  
+
+Receives http POST requests containing json payloads formatted `{"length": value}`, where `value` can be converted to an integer.  
+Responds with json payloads formatted `{"string": randString}`, where `randString` is a string of `value` random characters.
 
 - [Directions](#to-use)  
 - [Examples](#example-exchanges)  
@@ -8,7 +11,7 @@ Microservice for CS 365 that receives a length and returns a string of random ch
 ## To use
 - run `npm install` from `/rand-string`
 - run `npm start` from `/rand-string`
-- send a `POST` request to `http://localhost:8000` containing a `{"length": value }` json payload
+- send a `POST` request to `http://localhost:8000` containing a `{"length": value}` json payload
 
 ## Example exchanges
 ```http
