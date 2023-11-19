@@ -1,9 +1,9 @@
 # rand-string microservice
-Microservice for CS 365.  
+Microservice for CS 361.  
 
-Receives http POST requests containing json payloads formatted `{"length": value}`, where `value` can be converted to an integer.  
+Receives an http POST request with JSON payload containing `{"length": value}`, where `value` can be converted to an integer.  
 
-Responds with json payloads formatted `{"string": randString}`, where `randString` is a string of `value` random characters.
+Responds with JSON payload containing `{"string": randString}`, where `randString` is a string of `value` random characters.
 
 - [Directions](#to-use)  
 - [Examples](#example-exchanges)  
