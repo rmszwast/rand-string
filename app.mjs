@@ -19,6 +19,14 @@ app.listen(port, () => {
     console.log(`App listening on port ${port}.`)
 });
 
+// CORS headers
+app.use("/", (req, res, next) => {
+  res.set("Access-Control-Allow-Headers", "*");
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "POST");
+  next();
+});
+
 // parse requests with json payloads
 app.use("/", express.json());
 
@@ -40,9 +48,4 @@ app.post("/", (req, res) => {
         // send error message in response
         res.status(400).json({"error": "invalid key or value provided"})
     }
-});
-
-// handler for non-POST requests
-app.use("/", (req, res) => {
-    res.status(405).json({"error": "invalid http method"})
 });
